@@ -40,6 +40,9 @@ public class Library {
         borrowedItems.forEach(item ->{
             if(item.getBorrowDate().compareTo(item.getBorrowDate().plusDays(item.getLenghtOfBorrowPeriod()))){
                 overdueItems.add(item.getId());
+
+                // TODO find out why it dose not let me compare dates with the built in methods
+                // TODO compare the dates and add the UUID of the item to the list
             }
         });
 
